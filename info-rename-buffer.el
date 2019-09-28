@@ -6,7 +6,7 @@
 ;; Keywords: help
 ;; Package: info-rename-buffer
 ;; Homepage: https://github.com/oitofelix/info-rename-buffer
-;; Package-Version: 0
+;; Version: 0
 ;; Package-Requires: ((emacs "24.3"))
 
 ;; This program is free software: you can redistribute it and/or
