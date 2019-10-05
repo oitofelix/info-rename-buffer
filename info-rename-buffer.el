@@ -40,7 +40,7 @@
 (require 'info)
 
 
-;;;###autoload;
+;;;###autoload
 (define-minor-mode info-rename-buffer-mode
   "Toggle Info-Rename-Buffer mode on or off.
 With a prefix argument ARG, enable Info-Rename-Buffer mode if ARG
