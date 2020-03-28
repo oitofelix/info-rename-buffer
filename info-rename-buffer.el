@@ -63,11 +63,11 @@ name.  See the command \\[info-rename-buffer]."
 (defun info-rename-buffer ()
   "Rename current Info buffer to match its visiting manual."
   (interactive)
-  (unless (ignore-errors
-	    (rename-buffer
-	     (format "*info %s*" (file-name-base Info-current-file))
-	     'unique))
-    (user-error "%s" "This is not an Info buffer.")))
+  (unless (eq major-mode 'Info-mode) (user-error "This is not an Info buffer"))
+  (unless (not (string-match-p "^\\*info" (buffer-name)))
+    (rename-buffer (if (equal Info-current-file "dir") "*info*"
+                     (format "*info %s*" (file-name-base Info-current-file)))
+                   'unique)))
 
 
 (provide 'info-rename-buffer)
